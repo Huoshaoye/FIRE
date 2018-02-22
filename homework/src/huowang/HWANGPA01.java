@@ -1,4 +1,4 @@
-package homework;
+package huowang;
 
 import javax.swing.JOptionPane;
 

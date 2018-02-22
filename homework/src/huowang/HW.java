@@ -1,8 +1,9 @@
-package homework;
+package huowang;
 
 import javax.swing.JOptionPane;
 
-public class HW {
+public class HW 
+{
 	
 		public static boolean isValidPassword(String s)
 		{	
