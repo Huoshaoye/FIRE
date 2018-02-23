@@ -25,23 +25,40 @@ public class HW
 						password = true;
 					else
 					{
-						JOptionPane.showMessageDialog(null, "invalidpassword");
-						password = false;
-						return password;
+                        int option = JOptionPane.showConfirmDialog(null, "Invalid password, would you like try again");
+						if (option!=JOptionPane.YES_OPTION) 
+							System.exit(0);
+						else
+						{
+							String s1 = JOptionPane.showInputDialog("enter your password");
+							isValidPassword(s1);
+						}
+							
 					}		
 				}
 			   if (count<2)
 			   {
-			  JOptionPane.showMessageDialog(null, "invalid password");
-			   return password;
+				   int option = JOptionPane.showConfirmDialog(null, "Invalid password, would you like try again");
+					if (option!=JOptionPane.YES_OPTION) 
+						System.exit(0);
+					else
+					{
+						String s1 = JOptionPane.showInputDialog("enter your password");
+						isValidPassword(s1);
+					}
 			   }
-			  JOptionPane.showMessageDialog(null, "valid password");
 				
 			}
-			else
+			else if(count >=2)
 			{
-				JOptionPane.showMessageDialog(null, "invalid password");
-				return password;
+				int option = JOptionPane.showConfirmDialog(null, "valid password, would you like try again");
+				if (option!=JOptionPane.YES_OPTION) 
+					System.exit(0);
+				else
+				{
+					String s1 = JOptionPane.showInputDialog("enter your password");
+					isValidPassword(s1);
+				}
 			}
 			return password;
 		}
