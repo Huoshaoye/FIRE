@@ -47,18 +47,17 @@ public class HW
 						isValidPassword(s1);
 					}
 			   }
-				
-			}
-			else if(count >=2)
-			{
-				int option = JOptionPane.showConfirmDialog(null, "valid password, would you like try again");
-				if (option!=JOptionPane.YES_OPTION) 
-					System.exit(0);
-				else
+			   else if(count >=2)
 				{
-					String s1 = JOptionPane.showInputDialog("enter your password");
-					isValidPassword(s1);
-				}
+					int option = JOptionPane.showConfirmDialog(null, "valid password, would you like try again");
+					if (option!=JOptionPane.YES_OPTION) 
+						System.exit(0);
+					else
+					{
+						String s1 = JOptionPane.showInputDialog("enter your password");
+						isValidPassword(s1);
+					}
+				}	
 			}
 			return password;
 		}
@@ -68,6 +67,6 @@ public class HW
 			isValidPassword(password);
 			
 		}
-	}
+}
 
 
